@@ -12,6 +12,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  // Looks like this randomizes the user id associated with the seeded projects each time the app is seeded. I'm choosing to hard code a user id to each seed post.
   for (const project of projectData) {
     await Project.create({
       ...project,
