@@ -1,7 +1,3 @@
-/*  ----------------------------------------------------------------------------------------------------------------------------------------------------
----------------------------------------------------  TAKEN FROM AN ACTIVITY, HASN'T BEEN EDITED YET  ---------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------------------------------------  */
-
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
@@ -24,14 +20,15 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
-    },
+    // Omitting the email at this point. Can add later if necessary.
+    // email: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   unique: true,
+    //   validate: {
+    //     isEmail: true,
+    //   },
+    // },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -46,10 +43,11 @@ User.init(
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
-      beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-        return updatedUserData;
-      },
+      // From mini-project. This seems to be for a user to update their password, functionality not required in this assignment.
+      // beforeUpdate: async (updatedUserData) => {
+      //   updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+      //   return updatedUserData;
+      // },
     },
     sequelize,
     timestamps: false,
