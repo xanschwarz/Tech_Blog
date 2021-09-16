@@ -1,0 +1,28 @@
+[
+    {
+      "comment": "We've been building towards this in class. Interesting to see it all work together.",
+      "user_id": 2,
+      "post_id": 1
+    },
+    {
+      "comment": "Not to mention the fur everywhere!",
+      "user_id": 3,
+      "post_id": 2
+    },
+    {
+        "comment": "In this age of sensitive data leaks, it's important to diligently address both.",
+        "user_id": 1,
+        "post_id": 3
+      },
+      {
+        "comment": "I can see so much code at once, it's great!",
+        "user_id": 1,
+        "post_id": 4
+      },
+      {
+        "comment": "A few sites recommend the uplift V2, maybe check that out?",
+        "user_id": 2,
+        "post_id": 6
+      }
+  ]
+  
