@@ -20,15 +20,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // Omitting the email at this point. Can add later if necessary.
-    // email: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   unique: true,
-    //   validate: {
-    //     isEmail: true,
-    //   },
-    // },
+    // Chose to omit user email at this point. Can add later if necessary.
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -38,16 +30,13 @@ User.init(
     },
   },
   {
+    // It seems like the beforeCreate hook is causing users to seed in random order?
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
-      // From mini-project. This seems to be for a user to update their password, functionality not required in this assignment.
-      // beforeUpdate: async (updatedUserData) => {
-      //   updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-      //   return updatedUserData;
-      // },
+      // From mini-project: There is a beforeUpdate hook that seems to be for a user to update their password, functionality not required in this assignment.
     },
     sequelize,
     timestamps: false,
