@@ -1,28 +1,24 @@
-/*  ----------------------------------------------------------------------------------------------------------------------------------------------------
----------------------------------------------------  TAKEN FROM AN ACTIVITY, HASN'T BEEN EDITED YET  ---------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------------------------------------  */
-
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+​ol,
+ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding-inline-start: 0px;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
+a {
   font-weight: bold;
-  margin-left: -5px;
+  text-decoration: none;
+}
+
+.container-fluid {
+  height: 100%;
 }
