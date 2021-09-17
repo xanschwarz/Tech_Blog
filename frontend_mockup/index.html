@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex-shrink-0 flex items-center">
+                        <!-- <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"> -->
+                        <!-- <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"> -->
+                    </div>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                aria-current="page">Home</a>
+                            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                aria-current="page">Dashboard</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                    aria-current="page">Dashboard</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- The Tech Blog banner -->
+    <div class="md:flex md:items-center md:justify-between bg-gray-800">
+        <div class="flex-1 min-w-0">
+            <!-- Text size doesn't change?? -->
+            <h1 class="text-2xl font-bold leading-7 text-white sm:text-3xl sm:truncate m-3">
+                The Tech Blog
+            </h1>
+        </div>
+    </div>
+
+    <!-- Posts -->
+    <div class="mt-4 mx-4">
+        <ul role="list" class="space-y-4">
+            <li class="bg-white px-4 py-6 shadow sm:p-6 sm:rounded-lg">
+                <article aria-labelledby="question-title-81614">
+                    <div>
+                        <div class="flex space-x-3">
+                            <div class="min-w-0 flex-1">
+                                <p class="text-sm font-medium text-gray-900">
+                                    <a href="#" class="hover:underline">Dries Vincent</a>
+                                </p>
+                                <p class="text-sm text-gray-500">
+                                    <time datetime="2020-12-09T11:43:00">December 9 at 11:43 AM</time>
+                                </p>
+                            </div>
+                        </div>
+                        <h2 id="question-title-81614" class="mt-4 text-base font-medium text-gray-900">
+                            What would you have done differently if you ran Jurassic Park?
+                        </h2>
+                    </div>
+                    <div class="mt-2 text-sm text-gray-700 space-y-4">
+                        <p>Jurassic Park was an incredible idea and a magnificent feat of engineering, but poor
+                            protocols and a disregard for human safety killed what could have otherwise been one of the
+                            best businesses of our generation.</p>
+                        <p>Ultimately, I think that if you wanted to run the park successfully and keep visitors safe,
+                            the most important thing to prioritize would be&hellip;</p>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </div>
+    <!-- Comments -->
+    <div class="mt-4 ml-10 mr-4">
+        <ul role="list" class="space-y-4">
+            <li class="bg-white px-4 py-6 shadow sm:p-6 sm:rounded-lg">
+                <article aria-labelledby="question-title-81614">
+                    <div>
+                        <div class="flex space-x-3">
+                            <div class="min-w-0 flex-1">
+                                <p class="text-sm font-medium text-gray-900">
+                                    <a href="#" class="hover:underline">Dries Vincent</a>
+                                </p>
+                                <p class="text-sm text-gray-500">
+                                    <time datetime="2020-12-09T11:43:00">December 9 at 11:43 AM</time>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-sm text-gray-700 space-y-4">
+                        <p>This is a comment!</p>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Comment form -->
+    <!--  This example requires Tailwind CSS v2.0+. This example requires some changes to your config:  
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  } -->
+    <form class="space-y-2">
+        <div class="mx-4">
+            <div>
+                <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                    <div class="sm:col-span-6">
+                        <label for="about" class="block text-sm font-medium text-gray-700">
+                            Comment
+                        </label>
+                        <div class="mt-1">
+                            <textarea id="about" name="about" rows="3"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex justify-end mr-10">
+                <button type="button"
+                    class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Cancel
+                </button>
+                <button type="submit"
+                    class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Update
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- login -->
+
+    <!-- sign-up -->
+
+    <!-- Omit footer until everything else is completed -->
+
+</body>
+
+</html>
