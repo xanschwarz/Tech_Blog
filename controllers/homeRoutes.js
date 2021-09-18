@@ -3,42 +3,42 @@ const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Initial get route just to check that it can render the homepage.
-router.get('/', async (req, res) => {
-  try {
-    res.render('homepage', {});
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.get('/', async (req, res) => {
+//   try {
+//     res.render('homepage', {});
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // These routes will be activated and tested after the handlebars start getting written.
 // Homepage routes will handle rendering the homepage with posts displayed, serving a single post if one is selected, and the server
 // response to a login/logout event.
 
-// router.get('/', async (req, res) => {
-//   try {
-//     // Get all posts and JOIN with user data
-//     const PostData = await Post.findAll({
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['username'],
-//         },
-//       ],
-//     });
+router.get('/', async (req, res) => {
+  try {
+    // Get all posts and JOIN with user data
+    const postData = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
 
-//     // Serialize data so the template can read it
-//     const posts = postData.map((post) => post.get({ plain: true }));
+    // Serialize data so the template can read it
+    const posts = postData.map((post) => post.get({ plain: true }));
 
-//     // Pass serialized data and session flag into template
-//     res.render('homepage', { 
-//       posts, 
-//       logged_in: req.session.logged_in 
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    // Pass serialized data and session flag into template
+    res.render('homepage', { 
+      posts, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // This should return a single post with it's comments and the authors of each.
 // router.get('/post/:id', async (req, res) => {
