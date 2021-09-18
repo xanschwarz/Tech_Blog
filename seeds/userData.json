@@ -1,14 +1,14 @@
 [
   {
-    "name": "Kvothe",
+    "username": "Kvothe",
     "password": "password123"
   },
   {
-    "name": "Denna",
+    "username": "Denna",
     "password": "password123"
   },
   {
-    "name": "Bast",
+    "username": "Bast",
     "password": "password123"
   }
 ]
