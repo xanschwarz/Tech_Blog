@@ -2,15 +2,6 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-// Initial get route just to check that it can render the homepage.
-// router.get('/', async (req, res) => {
-//   try {
-//     res.render('homepage', {});
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 // These routes will be activated and tested after the handlebars start getting written.
 // Homepage routes will handle rendering the homepage with posts displayed, serving a single post if one is selected, and the server
 // response to a login/logout event.
@@ -78,14 +69,14 @@ router.get('/', async (req, res) => {
 //   }
 // });
 
-// router.get('/login', (req, res) => {
-//   // If the user is already logged in, redirect the request to another route
-//   if (req.session.logged_in) {
-//     res.redirect('/dashboard');
-//     return;
-//   }
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
 
-//   res.render('login');
-// });
+  res.render('login');
+});
 
 module.exports = router;
