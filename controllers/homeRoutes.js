@@ -31,43 +31,38 @@ router.get('/', async (req, res) => {
   }
 });
 
-// This should return a single post with it's comments and the authors of each.
-// router.get('/post/:id', async (req, res) => {
-//   try {
-//     const postData = await Post.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['username'],
-//         },
-//         {
-//           model: Comment,
-//           include: [
-//             {
-//               model: User,
-//               attributes: ['username'],
-//             }
-//           ]
-//         }
-//       ],
-//     });
+router.get('/post/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Comment,
+          include: [
+            {
+              model: User,
+              attributes: ['username'],
+            },
+          ],
+        },
+      ],
+    });
 
-//     if (!postData) {
-//       res.status(404).json({ message: 'No post found' });
-//       return;
-//     }
+    if (!postData) {
+      res.status(404).json({ message: 'No post found' });
+      return;
+    }
 
-//     const post = postData.get({ plain: true });
+    const post = postData.get({ plain: true });
 
-//     // Render 'post' as placeholder as the handlebars have not been written yet.
-//     res.render('post', {
-//       ...post,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.render('single-post', { post });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
