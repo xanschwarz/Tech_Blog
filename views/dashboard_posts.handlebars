@@ -1,13 +1,3 @@
-<!-- Your Dashboard banner -->
-<div class="md:flex md:items-center md:justify-between bg-gray-800">
-    <div class="flex-1 min-w-0">
-        <!-- Text size doesn't change?? -->
-        <h1 class="text-2xl font-bold leading-7 text-white sm:text-3xl sm:truncate m-3">
-            Your Dashboard
-        </h1>
-    </div>
-</div>
-
 <!-- User's posts -->
 {{#each posts as |post| }}
 <div class="mt-4 mx-4 post">
@@ -28,20 +18,8 @@
 </div>
 {{/each}}
 
-<!-- Create post button -->
-<div class="mt-4 mx-4 flex justify-center" class="create-post-button">
-    <button type="button" id="create-post-button"
-        class="inline-flex items-center pl-3 pr-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-        <!-- Heroicon document-add solid -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-                d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z"
-                clip-rule="evenodd" />
-        </svg>
-        Create New Post
-    </button>
-</div>
 
+{{!-- Following needs to be moved to their own handlebars, css, js, controllers adjusted accordingly --}}
 <!-- Create post form -->
 <form class="space-y-2 mt-4 create-post-form" style="display:none">
     <div class="mx-4">
@@ -133,5 +111,3 @@
         </div>
     </div>
 </form>
-
-<script src="./js/new_post.js"></script>
