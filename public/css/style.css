@@ -15,8 +15,11 @@ ul {
 }
 
 a {
-  font-weight: bold;
   text-decoration: none;
+}
+
+.navbar_link {
+  font-weight: bold;
 }
 
 .container-fluid {

@@ -1,0 +1,26 @@
+{{!-- For proof of concept HTML was taken from home_posts. Adjust once functional. --}}
+
+<div class="mt-4 mx-4">
+  <ul role="list" class="space-y-4">
+    <li class="bg-white px-4 py-6 shadow sm:p-6 sm:rounded-lg">
+      <article aria-labelledby="question-title-81614">
+        <div>
+          <h2 id="question-title-81614" class="text-base font-medium text-gray-900">
+            {{post.title}}
+          </h2>
+          <div class="flex justify-between">
+            <div class="ml-4 text-sm font-medium text-gray-900">
+              - {{post.user.username}}
+            </div>
+            <div class="text-sm text-gray-500">
+              <div>{{format_date post.date_created}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-2 text-sm text-gray-700 space-y-4">
+          <p>{{post.content}}</p>
+        </div>
+      </article>
+    </li>
+  </ul>
+</div>
