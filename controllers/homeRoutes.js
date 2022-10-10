@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 // These routes will be activated and tested after the handlebars start getting written.
 // Homepage routes will handle rendering the homepage with posts displayed, serving a single post if one is selected, and the server
