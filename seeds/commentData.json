@@ -1,25 +1,30 @@
 [
   {
+    "id": 1,
     "content": "We've been building towards this in class. Interesting to see it all work together.",
-    "user_id": 2,
+    "user_id": 3,
     "post_id": 1
   },
   {
+    "id": 2,
     "content": "Not to mention the fur everywhere!",
-    "user_id": 3,
+    "user_id": 2,
     "post_id": 2
   },
   {
+    "id": 3,
     "content": "In this age of sensitive data leaks, it's important to diligently address both.",
     "user_id": 1,
     "post_id": 3
   },
   {
+    "id": 4,
     "content": "I can see so much code at once, it's great!",
     "user_id": 1,
     "post_id": 4
   },
   {
+    "id": 5,
     "content": "A few sites recommend the uplift V2, maybe check that out?",
     "user_id": 2,
     "post_id": 6
